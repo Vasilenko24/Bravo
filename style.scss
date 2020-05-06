@@ -1,0 +1,204 @@
+@import 'vars';
+@import 'fonts';
+@import 'global';
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    START CODE
+//
+//---------------------------------------------------------------------------------------------------------.
+.header-inner {
+    display: flex;
+    padding-top: 35px;
+    justify-content: space-around;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.header-logo__top {
+    a {
+        font-size: 30px;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        opacity: 0.9;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+}
+
+.header-logo__down {
+    a {
+        color: $blue;
+    }
+
+}
+
+.header-menu {
+    ul {
+        li {
+
+            display: inline-block;
+
+            &+li {
+                margin-left: 35px;
+            }
+
+            a {
+                padding: 10px 15px;
+                color: #fff;
+                position: relative;
+
+                &:hover {
+                    background-color: $blue;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -15px;
+                    border-width: 0 0 34px 15px;
+                    border-color: transparent transparent $blue;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    top: 0;
+                    opacity: 1;
+                    transform: scaleX(1);
+                    @media(max-width: 1920px){
+                        border-width: 0 0 39px 15px;
+                    }
+                    @media(max-width: 1800px){
+                        border-width: 0 0 38px 15px;
+                    }
+                    @media(max-width: 1500px){
+                        border-width: 0 0 37px 15px;
+                    }
+                    @media(max-width: 1400px){
+                        border-width: 0 0 37px 15px;
+                    }
+                    @media(max-width: 1250px){
+                        border-width: 0 0 38px 15px;
+                    }
+                }
+
+                &:hover::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    top: 0;
+                    transition: all .6s;
+                    right: -15px;
+                    border-width: 37px 15px 0 0;
+                    border-color: $blue transparent transparent;
+                }
+            }
+        }
+    }
+}
+
+.particles {
+    height: 100vh;
+    width: 100%;
+    background: $grey;
+    position: relative;
+}
+
+.mainpage-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.content-title {
+    padding-top: 10px;
+    font-size: 34px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.8;
+    cursor: default;
+}
+
+.content-links {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.content-link {
+    color: #fff;
+    position: relative;
+}
+
+.link-about {
+    margin-right: 100px;
+    padding-left: 60px;
+    font-size: 20px;
+    padding: 10px 60px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all .6s;
+    &:hover{
+        color: $blue;
+    }
+    &:hover::before {
+        background-color: #fff;
+     }
+}
+.link-about::before{
+    content: "\ea1c";
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    padding: 2px 2px 2px 5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'icomoon';
+}
+
+
+
+.link-main {
+    padding: 10px 50px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all .6s;
+    font-size: 20px;
+    &:hover{
+        border: 2px solid $blue;
+    }
+    &:hover::after {
+       color: $blue;
+       transition: all .6s;
+    }
+}
+.link-main::after{
+    content: "\ea3c";
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-family: 'icomoon';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+  
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    END CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import 'media';
